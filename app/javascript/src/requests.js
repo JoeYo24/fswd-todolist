@@ -60,7 +60,7 @@ export var deleteTask = function (id, successCB, errorCB) {
 export var updateTask = function (id, content, successCB, errorCB) {
     var request = {
         type: 'PUT',
-        url: 'api/tasks/:id?api_key=1',
+        url: 'api/tasks/' + id + '?api_key=1',
         data: {
             task: {
                 id: id,
@@ -76,7 +76,7 @@ export var updateTask = function (id, content, successCB, errorCB) {
 export var markTaskComplete = function (id, successCB, errorCB) {
     var request = {
         type: 'PUT',
-        url: 'api/tasks/:id/mark_complete?api_key=1',
+        url: 'api/tasks/' + id + '/mark_complete?api_key=1',
         data: {
             task: {
                 id: id
@@ -91,7 +91,7 @@ export var markTaskComplete = function (id, successCB, errorCB) {
 export var markTaskActive = function (id, successCB, errorCB) {
     var request = {
         type: 'PUT',
-        url: 'api/tasks/:id/mark_active?api_key=1',
+        url: 'api/tasks/' + id + '/mark_active?api_key=1',
         data: {
             task: {
                 id: id
